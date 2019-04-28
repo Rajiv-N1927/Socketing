@@ -1,4 +1,5 @@
 #include "unp.h"
+#include <stdio.h>
 
 int main(int argc, char** argv) {
     int sockfd, n;
@@ -8,7 +9,7 @@ int main(int argc, char** argv) {
     if (argc != 2)
         err_quit("Usage: a.out <IPaddress>");
 
-    if ( (sockfd = socket(AF_INET, SOCK_STREAM, 0)) < 0)
+    if ( (sockfd = Socket(AF_INET, SOCK_STREAM, 0)) < 0)
         err_sys("Socket error");
 
     bzero(&servaddr, sizeof(servaddr));
