@@ -16,7 +16,7 @@
  *warning: passing arg 2 of `connect' discards `const' from pointer target type
  */
 
-#include	"unp.h"
+#include	"../unp.h"
 
 int
 Accept(int fd, struct sockaddr *sa, socklen_t *salenptr)
@@ -77,7 +77,7 @@ int
 Inet6_rth_space(int type, int segments)
 {
 	int ret;
-	
+
 	ret = inet6_rth_space(type, segments);
 	if (ret < 0)
 		err_quit("inet6_rth_space error");
